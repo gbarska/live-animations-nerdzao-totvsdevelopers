@@ -1,0 +1,7 @@
+<h2>Sttagered Lists State</h2>
+
+<div [@listPhotosAnimation]="photos?.length">
+    <div *ngFor="let photo of photos" class="p-2">
+        <img [src]="'../../assets/'+ photo" width="160px">
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row m-4">
+
+        <h2>Multiple states</h2>
+    
+        <div class="col-md-12">
+                <img [src]="'../../assets/angular.png'"
+                 alt="angular-icon" 
+                 [@photoState]="position">
+        </div>
+    
+        <div class="col-md-12 m-4 p-4">
+            <button 
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="changePosition('move')"
+            >Translate</button>
+            
+            <button
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="changePosition('spin')"
+            >Rotate</button>
+            
+            <button type="button"
+            class="btn btn-outline-secondary"
+            (click)="changePosition('enlarge')"
+            >Scale</button>
+            
+            <button 
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="changePosition('default')"
+            >Reset</button>
+        </div>
+</div>
+
+

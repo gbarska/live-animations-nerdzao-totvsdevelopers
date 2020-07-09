@@ -1,0 +1,14 @@
+<h2 class="m-3">Bug state</h2>
+
+<div class="row m-4">
+    <div
+    (mousedown)="clickInfo = 'mousedown'"
+    [@clickedState]="clickInfo"></div>
+</div>
+
+<div class="row m-4">
+      <p
+      (click)="paragraphClick = 'clicked'"
+      [@clickedState]="paragraphClick">Some text</p>
+</div>
+
