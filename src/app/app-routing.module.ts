@@ -6,6 +6,7 @@ import { BugComponent } from './bug/bug.component';
 import { ListComponent } from './list/list.component';
 import { TodoComponent } from './todo/todo.component';
 import { MultiComponent } from './multi/multi.component';
+import { CallbackComponent } from './callback/callback.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/simple', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
   { path: 'bug', component: BugComponent },
   { path: 'list', component: ListComponent },
   { path: 'todo', component: TodoComponent },
-  { path: 'multi', component: MultiComponent }
+  { path: 'multi', component: MultiComponent },
+  { path: 'callbacks', component: CallbackComponent }
 ];
 
 @NgModule({

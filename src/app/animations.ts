@@ -187,3 +187,44 @@ trigger('listPhotosAnimation', [
 ]);
 
 
+
+
+
+export const ListStateTrigger =
+trigger('listState', [
+        transition(':enter', [
+      style({
+        opacity: 0,
+        backgroundColor: 'white'
+      }),
+      group([
+        animate(200, style({
+          opacity: 0.7
+        })),
+       animate('5000ms ease-out', keyframes([
+         style({
+           backgroundColor: 'white',
+          offset: 0
+         }),
+         style({
+          backgroundColor: 'blue',
+         offset: 0.8
+        }),
+        style({
+          backgroundColor: 'darkblue',
+         offset: 1
+        })
+       ]))
+      ]), 
+      animate(300, style({
+        backgroundColor: 'lightblue'
+      })),
+        animate(300, style({
+          opacity: 1
+        }))
+      ]),
+      transition(':leave', animate(300, style({
+          opacity: 0
+        }))
+      )
+  ]);

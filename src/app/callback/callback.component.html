@@ -1,1 +1,14 @@
-<p>callback works!</p>
+<div class="row m-4">
+    <button class="btn" (click)="onAddElement()">Add Element</button>
+</div>
+
+<div class="row m-4">
+    <ul class="list-group">
+        <li class="list-group-item" 
+        @listState
+        (@listState.start)="onStart($event)"
+        (@listState.done)="onDone($event)"
+        *ngFor="let result of testResults"
+    >{{result}}</li>
+      </ul>
+</div>
